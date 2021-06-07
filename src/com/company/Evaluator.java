@@ -16,6 +16,8 @@ public class Evaluator {
                 values.add(evaluateOperator(values.pop(), values.pop(), token.getName()));
             }else if(token.getType() == TokenType.UNARY_OPERATOR){
                 values.add(evaluateUnary(values.pop(), token.getName()));
+            }else if(token.getType() == TokenType.FUNCTION){
+                values.add(evaluateFunction(values.pop(), token.getName()));
             }
         }
 
@@ -32,11 +34,18 @@ public class Evaluator {
         };
     }
 
-    private Double evaluateUnary(Double v1, String operator){
+    private Double evaluateUnary(Double n1, String operator){
         return switch (operator){
-            case "M" -> v1 * -1D;
-            case "P" -> v1 * 1D;
+            case "M" -> n1 * -1D;
+            case "P" -> n1 * 1D;
             default -> throw new IllegalStateException("Unexpected value: " + operator);
+        };
+    }
+
+    private Double evaluateFunction(Double n1, String function){
+        return switch (function){
+            case "sqrt" -> Math.sqrt(n1);
+            default -> throw new IllegalStateException("Unexpected value: " + function);
         };
     }
 

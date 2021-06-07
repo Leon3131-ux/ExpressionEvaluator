@@ -28,7 +28,7 @@ public class Tokenizer {
                 previous = TokenType.NUMBER;
                 i = y - 1;
             } else if(isOperator(chars[i])){
-                if(previous == TokenType.NUMBER){
+                if(previous == TokenType.NUMBER || previous == TokenType.RIGHT_PARENTHESES){
                     tokens.add(new Token(String.valueOf(chars[i]), TokenType.OPERATOR));
                     previous = TokenType.OPERATOR;
                 }else {
