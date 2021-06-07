@@ -30,6 +30,7 @@ public class Evaluator {
             case "-" -> n2 - n1;
             case "*" -> n2 * n1;
             case "/" -> n2 / n1;
+            case "^" -> Math.pow(n2, n1);
             default -> 0D;
         };
     }

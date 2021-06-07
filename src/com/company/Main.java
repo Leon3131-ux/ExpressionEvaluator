@@ -10,7 +10,7 @@ public class Main {
         ShuntingYard yard = new ShuntingYard();
         Evaluator evaluator = new Evaluator();
 
-        List<Token> tokens = tokenizer.getTokens("sqrt(4)--2");
+        List<Token> tokens = tokenizer.getTokens("(-2)^3");
 
         tokens.forEach(token -> System.out.print(token.getName()));
         System.out.println();
