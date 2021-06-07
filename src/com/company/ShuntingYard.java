@@ -20,7 +20,7 @@ public class ShuntingYard {
                 output.add(token);
             } else if(token.getType() == TokenType.FUNCTION){
                 operators.add(token);
-            }else if (token.getType() == TokenType.OPERATOR) {
+            }else if (token.getType() == TokenType.OPERATOR || token.getType() == TokenType.UNARY_OPERATOR) {
                 while (!operators.isEmpty() && operators.peek().getType() != TokenType.LEFT_PARENTHESES){
                     Token topOfStack = operators.peek();
                     if (precedence(token) < precedence(topOfStack) || precedence(token) == precedence(topOfStack) && !isRightAssociative(topOfStack)) {

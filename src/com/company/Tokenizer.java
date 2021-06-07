@@ -33,11 +33,11 @@ public class Tokenizer {
                     previous = TokenType.OPERATOR;
                 }else {
                     if(chars[i] == '-'){
-                        tokens.add(new Token(String.valueOf('M'), TokenType.OPERATOR));
+                        tokens.add(new Token(String.valueOf('M'), TokenType.UNARY_OPERATOR));
                     }else {
-                        tokens.add(new Token(String.valueOf('P'), TokenType.OPERATOR));
+                        tokens.add(new Token(String.valueOf('P'), TokenType.UNARY_OPERATOR));
                     }
-                    previous = TokenType.OPERATOR;
+                    previous = TokenType.UNARY_OPERATOR;
                 }
             } else if(chars[i] == '('){
                 tokens.add(new Token(String.valueOf(chars[i]), TokenType.LEFT_PARENTHESES));

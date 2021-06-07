@@ -13,11 +13,9 @@ public class Evaluator {
             if(token.getType() == TokenType.NUMBER){
                 values.add(Double.parseDouble(token.getName()));
             }else if(token.getType() == TokenType.OPERATOR){
-                if(token.getName().equals("M") || token.getName().equals("P")){
-                    values.add(evaluateUnary(values.pop(), token.getName()));
-                }else {
-                    values.add(evaluateOperator(values.pop(), values.pop(), token.getName()));
-                }
+                values.add(evaluateOperator(values.pop(), values.pop(), token.getName()));
+            }else if(token.getType() == TokenType.UNARY_OPERATOR){
+                values.add(evaluateUnary(values.pop(), token.getName()));
             }
         }
 
