@@ -1,4 +1,4 @@
-package com.company;
+package com.company.evaluator;
 
 
 import java.util.ArrayList;

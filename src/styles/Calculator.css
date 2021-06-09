@@ -1,0 +1,9 @@
+Button{
+    -fx-max-height: Infinity;
+    -fx-max-width: Infinity;
+    -fx-font-size: 20;
+}
+
+GridPane{
+    -fx-padding: 5;
+}
