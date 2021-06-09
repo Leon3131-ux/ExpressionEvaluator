@@ -18,7 +18,7 @@ public class Main extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("views/Calculator.fxml")));
 
-        Scene scene = new Scene(root);
+        Scene scene = new Scene(root, 600, 600);
         scene.getStylesheets().add("styles/Calculator.css");
 
         stage.setTitle("Calculator");

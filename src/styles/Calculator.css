@@ -7,3 +7,9 @@ Button{
 GridPane{
     -fx-padding: 5;
 }
+#outputLabel{
+    -fx-pref-height: 80px;
+    -fx-font-size: 22;
+    -fx-text-alignment: Right;
+    -fx-max-width: Infinity;
+}
