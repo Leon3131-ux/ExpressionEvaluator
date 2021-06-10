@@ -35,11 +35,14 @@
         <Button text="/" GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
         <Button text="." GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
         <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#clear"/>
-        <Button text="sqrt(" GridPane.rowIndex="1" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
         <Button text="=" GridPane.rowIndex="2" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#calculate"/>
         <HBox GridPane.rowIndex="3" GridPane.columnIndex="4" spacing="5">
             <Button text="(" HBox.hgrow="ALWAYS" onAction="#handleButtonClick"/>
             <Button text=")" HBox.hgrow="ALWAYS" onAction="#handleButtonClick"/>
+        </HBox>
+        <HBox GridPane.rowIndex="1" GridPane.columnIndex="4" spacing="5">
+            <Button text="sqrt(" HBox.hgrow="ALWAYS" onAction="#handleButtonClick"/>
+            <Button text="^" HBox.hgrow="ALWAYS" onAction="#handleButtonClick"/>
         </HBox>
     </GridPane>
 

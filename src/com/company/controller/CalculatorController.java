@@ -65,7 +65,6 @@ public class CalculatorController {
             Pane root = loader.load();
 
             Scene scene = new Scene(root, 200, 200);
-            scene.getStylesheets().add("../styles/BackgroundColor.css");
 
             stage.setTitle("Background Color");
             stage.setScene(scene);
