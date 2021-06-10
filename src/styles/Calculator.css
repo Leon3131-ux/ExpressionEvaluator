@@ -12,4 +12,5 @@ GridPane{
     -fx-font-size: 22;
     -fx-text-alignment: Right;
     -fx-max-width: Infinity;
+    -fx-padding: 5;
 }

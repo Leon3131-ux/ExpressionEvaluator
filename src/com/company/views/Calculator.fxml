@@ -17,29 +17,29 @@
             <MenuItem text="Background Color"/>
         </Menu>
     </MenuBar>
-    <Label id="outputLabel" text="test" VBox.vgrow="ALWAYS" textAlignment="RIGHT"/>
+    <Label fx:id="outputLabel" id="outputLabel" VBox.vgrow="ALWAYS" textAlignment="RIGHT"/>
     <GridPane VBox.vgrow="ALWAYS" hgap="5" vgap="5">
-        <Button text="0" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="1" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="2" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="3" GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="4" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="5" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="6" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="7" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="8" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="9" GridPane.rowIndex="0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="+" GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="-" GridPane.rowIndex="1" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="/" GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="." GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="sqrt(" GridPane.rowIndex="1" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
-        <Button text="=" GridPane.rowIndex="2" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS"/>
+        <Button text="0" GridPane.rowIndex="3" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="1" GridPane.rowIndex="2" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="2" GridPane.rowIndex="2" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="3" GridPane.rowIndex="2" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="4" GridPane.rowIndex="1" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="5" GridPane.rowIndex="1" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="6" GridPane.rowIndex="1" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="7" GridPane.rowIndex="0" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="8" GridPane.rowIndex="0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="9" GridPane.rowIndex="0" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="+" GridPane.rowIndex="0" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="-" GridPane.rowIndex="1" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="*" GridPane.rowIndex="2" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="/" GridPane.rowIndex="3" GridPane.columnIndex="3" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="." GridPane.rowIndex="3" GridPane.columnIndex="2" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="C" GridPane.rowIndex="0" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#clear"/>
+        <Button text="sqrt(" GridPane.rowIndex="1" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#handleButtonClick"/>
+        <Button text="=" GridPane.rowIndex="2" GridPane.columnIndex="4" GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS" onAction="#calculate"/>
         <HBox GridPane.rowIndex="3" GridPane.columnIndex="4" spacing="5">
-            <Button text="(" HBox.hgrow="ALWAYS"/>
-            <Button text=")" HBox.hgrow="ALWAYS"/>
+            <Button text="(" HBox.hgrow="ALWAYS" onAction="#handleButtonClick"/>
+            <Button text=")" HBox.hgrow="ALWAYS" onAction="#handleButtonClick"/>
         </HBox>
     </GridPane>
 
