@@ -19,7 +19,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("views/Calculator.fxml")));
 
         Scene scene = new Scene(root, 600, 600);
-        scene.getStylesheets().add("styles/Calculator.css");
+        scene.getStylesheets().add("com/company/styles/Calculator.css");
 
         stage.setTitle("Calculator");
         stage.setScene(scene);
