@@ -21,6 +21,9 @@ public class Evaluator {
             }
         }
 
+        if(values.size() > 1){
+            throw new IllegalStateException("Values not empty");
+        }
         return values.pop();
     }
 

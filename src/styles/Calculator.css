@@ -2,10 +2,12 @@ Button{
     -fx-max-height: Infinity;
     -fx-max-width: Infinity;
     -fx-font-size: 20;
+    -fx-font-weight: BOLD;
 }
 
 GridPane{
     -fx-padding: 5;
+    -fx-background-color: LIGHTGRAY;
 }
 #outputLabel{
     -fx-pref-height: 80px;
@@ -13,4 +15,5 @@ GridPane{
     -fx-text-alignment: Right;
     -fx-max-width: Infinity;
     -fx-padding: 5;
+    -fx-font-weight: BOLD;
 }

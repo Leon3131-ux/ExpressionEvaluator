@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox
+        xmlns="http://javafx.com/javafx"
+        xmlns:fx="http://javafx.com/fxml"
+        alignment="CENTER"
+
+>
+
+    <Label text="Pick Color"/>
+    <ColorPicker fx:id="colorPicker" onAction="#handleColorChange"/>
+
+</VBox>
