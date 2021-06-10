@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -40,15 +41,17 @@ public class CalculatorController {
     }
 
     public void calculate(){
-        try{
-            List<Token> tokens = tokenizer.getTokens(outputString);
-            tokens = yard.toRpn(tokens);
-            Double result = evaluator.evaluate(tokens);
+        if(!outputString.isEmpty()){
+            try{
+                List<Token> tokens = tokenizer.getTokens(outputString);
+                tokens = yard.toRpn(tokens);
+                Double result = evaluator.evaluate(tokens);
 
-            outputString = Double.toString(result);
-            outputLabel.setText(outputString);
-        }catch (Exception e){
-            outputLabel.setText("Syntax Error");
+                outputString = Double.toString(result);
+                outputLabel.setText(outputString);
+            }catch (Exception e){
+                outputLabel.setText("Syntax Error");
+            }
         }
     }
 
@@ -76,6 +79,26 @@ public class CalculatorController {
             alert.showAndWait();
             throw e;
         }
+    }
+
+    public void handleKeyTyped(KeyEvent event){
+        switch (event.getCharacter()) {
+            case "0" -> outputString = outputString.concat("0");
+            case "1" -> outputString = outputString.concat("1");
+            case "2" -> outputString = outputString.concat("2");
+            case "3" -> outputString = outputString.concat("3");
+            case "4" -> outputString = outputString.concat("4");
+            case "5" -> outputString = outputString.concat("5");
+            case "6" -> outputString = outputString.concat("6");
+            case "7" -> outputString = outputString.concat("7");
+            case "8" -> outputString = outputString.concat("8");
+            case "9" -> outputString = outputString.concat("9");
+            case "-" -> outputString = outputString.concat("-");
+            case "+" -> outputString = outputString.concat("+");
+            case "/" -> outputString = outputString.concat("/");
+            case "*" -> outputString = outputString.concat("*");
+        }
+        outputLabel.setText(outputString);
     }
 
 }
